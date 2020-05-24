@@ -6,6 +6,9 @@ $THEME->name = "blank";
 $THEME->sheets = array();
 // Array containing the names of the CSS stylesheets to include for the TinyMCE text editor content area.
 $THEME->editor_sheets = array();
+$THEME->scss = function($theme) {
+    theme_blank_get_main_scss_content($theme);
+};
 // Array containing maps to the different layout types to different layout files.
 $THEME->layouts = array(
     "base" => array(
@@ -33,3 +36,4 @@ $THEME->yuicssmodules = array();
 $THEME->rendererfactory = "theme_overridden_renderer_factory";
 // Defines a comma separated list of block types that cannot be deleted in this theme.
 $THEME->undeletableblocktypes = "";
+$THEME->iconsystem = \core\output\icon_system::FONTAWESOME;
