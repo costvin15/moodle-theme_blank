@@ -1,0 +1,27 @@
+{{> theme_blank/head }}
+
+<body {{{ body_attributes }}}>
+  <div id="page-wrapper">
+    {{{ output.standard_top_of_body_html }}}
+
+    {{> theme_blank/navbar }}
+    {{> theme_blank/nav-drawer }}
+
+    <div id="page">
+      {{{ output.full_header }}}
+      <div id="page-content">
+        <section id="region-main">
+          {{{ output.course_content_header }}}
+          {{{ output.main_content }}}
+          {{{ output.activity_navigation }}}
+          {{{ output.course_content_footer }}}
+        </section>
+      </div>
+    </div>
+  </div>
+  
+  {{{ output.standard_after_main_region_html }}}
+
+  {{> theme_blank/footer }}
+</body>
+</html>
