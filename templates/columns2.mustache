@@ -2,14 +2,22 @@
 
 <body {{{ body_attributes }}}>
   <div id="page-wrapper">
-    {{> theme_blank/navbar }}
-    {{> theme_blank/nav-drawer }}
-
     {{{ output.standard_top_of_body_html }}}
+    {{> theme_blank/navbar }}
 
-    <div id="page">
+    <div id="page" class="container-fluid">
       {{{ output.full_header }}}
-      <div id="page-content">
+      <div id="page-content" class="row pb-3">
+        <div id="region-main-box" class="col-12">
+          {{#hasblocks}}
+            <section data-region="blocks-column"
+              class="d-print-none"
+              aria-label="{{#str}}blocks{{/str}}">
+              {{{ sidepreblocks }}}  
+            </section>
+          {{/hasblocks}}
+        </div>
+
         <section id="region-main">
           {{{ output.course_content_header }}}
           {{{ output.main_content }}}
@@ -22,6 +30,7 @@
   
   {{{ output.standard_after_main_region_html }}}
 
+  {{> theme_blank/nav-drawer }}
   {{> theme_blank/footer }}
 </body>
 </html>
