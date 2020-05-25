@@ -1,23 +1,18 @@
-{{! <header>
-  <div class="navbar-custom">
-    <div class="container-fluid">
-      <img src="" />
+<header>
+  <nav class="navbar-custom fixed-top">
+    <div class="container px-0">
+      <a href="{{config.wwwroot}}">
+        <img class="logo" src="{{output.site_logo}}" />
+      </a>
 
-      <div class="d-flex flex-row-reverse item-menu">
-        <div class="my-4">
-          <span class="mr-3 light">Username</span>
+
+      <div class="navbar-large-menu text-white">
+        <div class="d-flex row-reverse">
+          <div id="user-menu">
+            <img src="{{output.profile_picture}}" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</header> }}
-
-<div class="row">
-  <div class="col-6">
-    <p>Hello</p>
-  </div>
-
-  <div class="col-6">
-    <p>World</p>
-  </div>
-</div>
+  </nav>
+</header>
